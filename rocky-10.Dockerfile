@@ -8,7 +8,7 @@
 # - https://ansible.readthedocs.io/projects/molecule/guides/systemd-container/
 #
 # Dockerfile reference: https://docs.docker.com/reference/dockerfile/
-FROM rockylinux/rockylinux:latest
+FROM rockylinux/rockylinux:10
 
 # Tells components like systemd they're running in Docker
 ENV container=docker
