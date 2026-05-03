@@ -43,6 +43,8 @@ If the image you built uses systemd, you need to start it with `systemd` execute
 - `local/kali-molecule` is the same arg as `-t [registry/]repository[:tag]` when you either pulled or built the image
 
 ```bash
+# kali-molecule is an example, adjust the name
+# base on the container and purpose.
 container_name='kali-molecule'
 container_hostname='kali-molecule'
 image_registry='local'
