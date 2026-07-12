@@ -35,14 +35,16 @@ RUN dnf -y install systemd && dnf clean all && \
 #
 # Rocky Linux also has no python3-libdnf5 package.
 #
-# This Dockerfile also includes the epel-release repository.
+# This Dockerfile also includes the epel-release and crb repositories.
 # - https://docs.rockylinux.org/books/admin_guide/13-softwares/#the-epel-repository
+# - https://wiki.rockylinux.org/rocky/repo/#notes-on-epel
 RUN dnf -y install \
     python3-pip \
     python3-rpm \
     sudo \
     which \
     epel-release \
+    && crb enable \
     && dnf clean all
 
 # This is required to avoid errors when installing Ansible in the next step
